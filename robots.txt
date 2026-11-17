@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ttangk97-eng.github.io/jellybooth/sitemap.xml
