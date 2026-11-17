@@ -52,15 +52,22 @@ h1 em{font-style:normal;color:var(--candy);display:block}
 .hint{display:none;margin:0 0 16px;font-size:14px}.hint a{color:#fff}
 .shots{max-width:1040px;margin:-24px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .shots img{width:100%;height:auto;aspect-ratio:506/1100;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.18);display:block;background:#3a3737}
-@media (max-width:720px){.shots{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
-main{max-width:680px;margin:0 auto;padding:56px 16px 80px}
+.langs{display:flex;flex-wrap:nowrap}
+@media (max-width:560px){.langs{width:100%;justify-content:space-between;margin-top:8px;border-top:1px solid rgba(255,255,255,.12)}.bar{margin-bottom:24px}}
+@media (max-width:720px){.shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 16px 8px;scroll-padding:0 16px;scrollbar-width:none}.shots::-webkit-scrollbar{display:none}.shots picture{flex:0 0 72%;scroll-snap-align:start}.store{width:100%;justify-content:center}}
+details{margin-top:32px;border-top:1px solid #e4e1da;padding-top:8px}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:#5c5856;font-size:15px}
+details section{margin-top:20px}
+footer{border-top:1px solid #e4e1da;max-width:680px;margin:0 auto;padding:16px 16px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:0 16px;font-size:14px;color:#5c5856}
+footer a{color:inherit;min-height:44px;display:inline-flex;align-items:center}
+main{max-width:680px;margin:0 auto;padding:48px 16px 32px}
 h2{font-size:19px;margin:0 0 8px;color:var(--candy-ink)}
 section+section{margin-top:32px}
 main a{display:inline-block;min-height:44px;line-height:44px}</style>
 </head>
 <body>
 <header>
-<nav class="bar" aria-label="Language"><img src="img/icon.png" width="36" height="36" alt=""><b>Jellybooth</b><a href="./" hreflang="ko" lang="ko" aria-current="page">한국어</a><a href="en/" hreflang="en" lang="en">English</a><a href="ja/" hreflang="ja" lang="ja">日本語</a><a href="zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+<nav class="bar" aria-label="Language"><img src="img/icon.png" width="36" height="36" alt=""><b>Jellybooth</b><span class="langs"><a href="./" hreflang="ko" lang="ko" aria-current="page">한국어</a><a href="en/" hreflang="en" lang="en">English</a><a href="ja/" hreflang="ja" lang="ja">日本語</a><a href="zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></span></nav>
 <div class="hero">
 <p class="hint" id="hint"></p><script>(function(){var n=(navigator.language||"").toLowerCase(),m={"en": ["en/", "English"], "ja": ["ja/", "日本語"], "zh": ["zh-Hant/", "繁體中文"]},k=n.startsWith("ko")?0:n.startsWith("ja")?"ja":n.startsWith("zh")?"zh":"en";if(!k)return;var h=document.getElementById("hint");h.innerHTML='<a href="'+m[k][0]+'">'+m[k][1]+' &rarr;</a>';h.style.display="block"})()</script>
 <h1>접으면 카메라,<em>펼치면 네컷 사진관</em></h1>
@@ -75,6 +82,7 @@ main a{display:inline-block;min-height:44px;line-height:44px}</style>
 <p>젤리부스는 iPhone Duo에 맞춘 레트로 카메라 앱이에요. 다른 iPhone에서도 카메라와 네컷 사진관, 앨범을 쓸 수 있어요. 바깥 화면 보여 주기와 테이블 사진관은 Duo에서만 돼요.</p>
 <p>문제가 있거나 궁금한 점은 메일로 알려 주세요. <a href="mailto:ttangk97@gmail.com">ttangk97@gmail.com</a></p>
 </section>
+<details><summary>다른 언어로 보기</summary>
 
 <section lang="en">
 <h2>Support</h2>
@@ -93,10 +101,8 @@ main a{display:inline-block;min-height:44px;line-height:44px}</style>
 <p>Jellybooth 是為 iPhone Duo 打造的復古相機 App。其他 iPhone 也能使用相機、四格拍貼和相簿，外螢幕預覽和桌上拍貼機只有 iPhone Duo 才有。</p>
 <p>有問題請寄信到 <a href="mailto:ttangk97@gmail.com">ttangk97@gmail.com</a></p>
 </section>
-<section lang="en">
-<h2>Privacy</h2>
-<p><a href="privacy.html">Privacy Policy</a></p>
-</section>
+</details>
 </main>
+<footer><span>&copy; 2026 Jellybooth</span><a href="privacy.html">Privacy Policy</a></footer>
 </body>
 </html>
